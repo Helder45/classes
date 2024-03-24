@@ -1,15 +1,11 @@
-import ContaBancaria from "./ContaBancaria";
-import ContaPoupanca from "./ContaPoupanca";
-import ContaCorrente from "./ContaCorrente";
-
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 class Banco {
-    private _listaContas: object[] = [];
-
-    public inserir(conta: ContaBancaria): void {
+    _listaContas = [];
+    inserir(conta) {
         this._listaContas.push(conta);
     }
-
-    public remover(conta: ContaBancaria): void {
+    remover(conta) {
         // console.log("Antes de remover");
         // console.log(this._listaContas);
         if (this._listaContas.length != 0) {
@@ -22,16 +18,12 @@ class Banco {
         // console.log("Depois de remover");
         // console.log(this._listaContas);
     }
-
-    public procurarConta(numero: number): ContaBancaria | null{
+    procurarConta(numero) {
         for (const conta of this._listaContas) {
             // if (conta.numeroConta === numero) {
-                
             // }
         }
-        return null
+        return null;
     }
-
 }
-
-export default Banco;
+exports.default = Banco;

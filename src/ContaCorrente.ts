@@ -4,7 +4,7 @@ import Imprimivel from "./Imprimivel";
 class ContaCorrente extends ContaBancaria implements Imprimivel{
     private _limite: number;
 
-    constructor(numeroConta: string, saldo: number, limite: number) {
+    constructor(numeroConta: number, saldo: number, limite: number) {
         super(numeroConta, saldo);
         this._limite = limite;
     }

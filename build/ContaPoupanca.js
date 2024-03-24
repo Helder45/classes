@@ -27,5 +27,8 @@ class ContaPoupanca extends ContaBancaria_1.default {
     depositar(valor) {
         return this.setSaldo = this.saldo + valor - this.taxaDeOperacao;
     }
+    transferir(valor, conta) {
+        return conta.depositar(this.sacar(valor));
+    }
 }
 exports.default = ContaPoupanca;

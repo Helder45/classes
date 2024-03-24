@@ -1,7 +1,7 @@
 abstract class ContaBancaria {
-    private _numeroConta: string;
+    private _numeroConta: number;
     private _saldo: number;
-    constructor(numeroConta: string, saldo: number) {
+    constructor(numeroConta: number, saldo: number) {
         this._numeroConta = numeroConta;
         this._saldo = saldo;
     }
@@ -14,7 +14,7 @@ abstract class ContaBancaria {
         return this._saldo;
     }
 
-    set setNumeroConta(numeroConta: string) {
+    set setNumeroConta(numeroConta: number) {
         this._numeroConta = numeroConta;
     }
 

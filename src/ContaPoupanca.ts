@@ -4,7 +4,7 @@ import Imprimivel from "./Imprimivel";
 class ContaPoupanca extends ContaBancaria implements Imprimivel{
     private taxaDeOperacao: number;
 
-    constructor(numeroConta: string, saldo: number, taxaDeOperacao: number) {
+    constructor(numeroConta: number, saldo: number, taxaDeOperacao: number) {
         super(numeroConta, saldo);
         this.taxaDeOperacao = taxaDeOperacao;
     }

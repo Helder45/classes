@@ -33,5 +33,8 @@ class ContaCorrente extends ContaBancaria_1.default {
     depositar(valor) {
         return this.setSaldo = this.saldo + valor;
     }
+    transferir(valor, conta) {
+        return conta.depositar(this.sacar(valor));
+    }
 }
 exports.default = ContaCorrente;
