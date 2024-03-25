@@ -24,11 +24,11 @@ class Banco {
     }
 
     public procurarConta(numero: number): ContaBancaria | null{
-        for (const conta of this._listaContas) {
-            // if (conta.numeroConta === numero) {
-                
-            // }
-        }
+        // for (const conta of this._listaContas) {
+        //     // if (conta.numeroConta === numero) {
+        //         return this._listaContas[1];
+        //     // }
+        // }
         return null
     }
 
