@@ -1,8 +1,9 @@
 import ContaBancaria from "./ContaBancaria";
 import ContaPoupanca from "./ContaPoupanca";
 import ContaCorrente from "./ContaCorrente";
+import Imprimivel from "./Imprimivel";
 
-class Banco {
+class Banco implements Imprimivel{
     private _listaContas: object[] = [];
 
     public inserir(conta: ContaBancaria): void {
@@ -30,6 +31,18 @@ class Banco {
         //     // }
         // }
         return null
+    }
+
+    mostrarDados(): string {
+        const msg = 'Conta: ';
+        if (this._listaContas.length > 0) {
+            this._listaContas.forEach((item) => {
+                return msg + item; 
+            });
+        }
+
+        return 'Contas não encontradas!';
+        
     }
 
 }
