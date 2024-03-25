@@ -11,9 +11,9 @@ class ContaCorrente extends ContaBancaria_1.default {
         this._limite = limite;
     }
     mostrarDados() {
-        return `\nNúmero da conta: ${this.numeroConta}
+        console.log(`\nNúmero da conta: ${this.numeroConta}
         Saldo: R$${this.saldo}
-        Limite do crédito da conta: ${this._limite}\n`;
+        Limite do crédito da conta: ${this._limite}\n`);
     }
     sacar(valor) {
         const diferenca = this.saldo - valor;

@@ -9,10 +9,10 @@ class ContaCorrente extends ContaBancaria implements Imprimivel{
         this._limite = limite;
     }
 
-    mostrarDados(): string {
-        return `\nNúmero da conta: ${this.numeroConta}
+    mostrarDados(): void {
+        console.log(`\nNúmero da conta: ${this.numeroConta}
         Saldo: R$${this.saldo}
-        Limite do crédito da conta: ${this._limite}\n`;
+        Limite do crédito da conta: ${this._limite}\n`);
         
     }
 

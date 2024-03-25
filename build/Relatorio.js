@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 class Relatorio {
     gerarRelatorio(imprimivel) {
-        return imprimivel.mostrarDados();
+        console.log(imprimivel.mostrarDados());
     }
 }
 exports.default = Relatorio;

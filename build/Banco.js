@@ -19,11 +19,18 @@ class Banco {
         // console.log(this._listaContas);
     }
     procurarConta(numero) {
-        for (const conta of this._listaContas) {
-            // if (conta.numeroConta === numero) {
-            // }
+        const contaEncontrada = this._listaContas.find((conta) => {
+            return conta.numeroConta == numero;
+        });
+        if (contaEncontrada) {
+            return contaEncontrada;
         }
         return null;
+    }
+    mostrarDados() {
+        console.log(this._listaContas.forEach((item) => {
+            return item.numeroConta;
+        }));
     }
 }
 exports.default = Banco;

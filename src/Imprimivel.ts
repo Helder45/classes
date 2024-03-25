@@ -1,5 +1,5 @@
 interface Imprimivel {
-    mostrarDados(): string;
+    mostrarDados(): void;
 }
 
 export default Imprimivel;

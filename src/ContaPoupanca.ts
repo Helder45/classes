@@ -9,10 +9,10 @@ class ContaPoupanca extends ContaBancaria implements Imprimivel{
         this.taxaDeOperacao = taxaDeOperacao;
     }
 
-    mostrarDados(): string {
-        return `\nNúmero da conta: ${this.numeroConta}
+    mostrarDados(): void {
+        console.log(`\nNúmero da conta: ${this.numeroConta}
         Saldo: R$${this.saldo}
-        Taxa de Operação: ${this.taxaDeOperacao}\n`;
+        Taxa de Operação: ${this.taxaDeOperacao}\n`);
     }
 
     public sacar(valor: number): number {

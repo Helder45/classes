@@ -1,10 +1,8 @@
 import ContaBancaria from "./ContaBancaria";
-import ContaPoupanca from "./ContaPoupanca";
-import ContaCorrente from "./ContaCorrente";
 import Imprimivel from "./Imprimivel";
 
 class Banco implements Imprimivel{
-    private _listaContas: object[] = [];
+    private _listaContas: ContaBancaria[] = [];
 
     public inserir(conta: ContaBancaria): void {
         this._listaContas.push(conta);
@@ -25,24 +23,25 @@ class Banco implements Imprimivel{
     }
 
     public procurarConta(numero: number): ContaBancaria | null{
-        // for (const conta of this._listaContas) {
-        //     // if (conta.numeroConta === numero) {
-        //         return this._listaContas[1];
-        //     // }
-        // }
-        return null
-    }
+        const contaEncontrada = this._listaContas.find(
+            (conta) => {
+                return conta.numeroConta == numero;
+            }
+        );
 
-    mostrarDados(): string {
-        const msg = 'Conta: ';
-        if (this._listaContas.length > 0) {
-            this._listaContas.forEach((item) => {
-                return msg + item; 
-            });
+        if (contaEncontrada) {
+            return contaEncontrada;
         }
 
-        return 'Contas não encontradas!';
-        
+        return null;
+    }
+
+    mostrarDados(): void {
+
+            console.log(
+             this._listaContas.forEach((item) => {
+                return item.numeroConta;
+            }));
     }
 
 }

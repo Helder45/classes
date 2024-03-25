@@ -6,11 +6,11 @@ abstract class ContaBancaria {
         this._saldo = saldo;
     }
 
-    get numeroConta() {
+    get numeroConta(): number {
         return this._numeroConta;
     }
 
-    get saldo() {
+    get saldo(): number {
         return this._saldo;
     }
 

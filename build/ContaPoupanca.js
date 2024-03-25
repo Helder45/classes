@@ -11,9 +11,9 @@ class ContaPoupanca extends ContaBancaria_1.default {
         this.taxaDeOperacao = taxaDeOperacao;
     }
     mostrarDados() {
-        return `\nNúmero da conta: ${this.numeroConta}
+        console.log(`\nNúmero da conta: ${this.numeroConta}
         Saldo: R$${this.saldo}
-        Taxa de Operação: ${this.taxaDeOperacao}\n`;
+        Taxa de Operação: ${this.taxaDeOperacao}\n`);
     }
     sacar(valor) {
         if (this.saldo > 0 && this.saldo > valor) {

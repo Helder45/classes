@@ -33,6 +33,7 @@ banco.inserir(contaCorrente2);
 // banco.remover(contaCorrente1);
 // banco.remover(contaPoupanca1);
 
-console.log("\n" + banco.procurarConta(4657663645));
+// const contaEncontrada = banco.procurarConta(4657663645);
+// console.log(contaEncontrada);
 
-// banco.procurarConta(456723);
+console.log(banco.mostrarDados());
