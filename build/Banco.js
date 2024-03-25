@@ -28,9 +28,9 @@ class Banco {
         return null;
     }
     mostrarDados() {
-        console.log(this._listaContas.forEach((item) => {
-            return item.numeroConta;
-        }));
+        for (let conta of this._listaContas) {
+            console.table(conta);
+        }
     }
 }
 exports.default = Banco;

@@ -36,4 +36,4 @@ banco.inserir(contaCorrente2);
 // const contaEncontrada = banco.procurarConta(4657663645);
 // console.log(contaEncontrada);
 
-console.log(banco.mostrarDados());
+banco.mostrarDados();
