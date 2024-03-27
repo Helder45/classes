@@ -1,5 +1,9 @@
 {
+  "type": "module",
   "devDependencies": {
     "typescript": "^5.4.3"
+  },
+  "dependencies": {
+    "inquirer": "^9.2.16"
   }
 }
