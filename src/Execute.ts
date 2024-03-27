@@ -1,7 +1,8 @@
+import PromptSync from "prompt-sync";
 import ContaCorrente from "./ContaCorrente";
 import ContaPoupanca from "./ContaPoupanca";
 
-// import prompt from 'prompt-sync';
+const input = PromptSync();
 
 class Execute {
     private _contaCorrente: ContaCorrente;
@@ -14,7 +15,9 @@ class Execute {
 
     criarConta() {
 
-        let a = prompt("Digite asdmfgnfdjkge");
+        let a = input('Olá');
+        console.log(a);
+        
 
         //Pedir para o usuário o tipo da conta
         //Verificar o tipo da conta
