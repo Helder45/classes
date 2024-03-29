@@ -94,9 +94,9 @@ class Execute {
 
     const contaEncontrada = this.banco.procurarConta(acc_num);
     if (contaEncontrada instanceof ContaCorrente) {
-      this.menu(contaEncontrada);
+      await this.menu(contaEncontrada);
     } else if (contaEncontrada instanceof ContaPoupanca) {
-      this.menu(contaEncontrada);
+      await this.menu(contaEncontrada);
     } else {
       console.log("\nConta Inexistente. Por favor, tente novamente.\n");
     }
