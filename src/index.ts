@@ -1,7 +1,7 @@
-import Banco from "./Banco";
-import ContaCorrente from "./ContaCorrente";
-import ContaPoupanca from "./ContaPoupanca";
-import Relatorio from "./Relatorio";
+import Banco from "./Banco.js";
+import ContaCorrente from "./ContaCorrente.js";
+import ContaPoupanca from "./ContaPoupanca.js";
+import Relatorio from "./Relatorio.js";
 
 const contaPoupanca1 = new ContaPoupanca(2345, 0, 6.75);
 const contaPoupanca2 = new ContaPoupanca(4657663645, 0, 5.5);

@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 class ContaBancaria {
     _numeroConta;
     _saldo;
@@ -20,4 +18,4 @@ class ContaBancaria {
         this._saldo = saldo;
     }
 }
-exports.default = ContaBancaria;
+export default ContaBancaria;

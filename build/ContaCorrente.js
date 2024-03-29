@@ -1,10 +1,5 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const ContaBancaria_1 = __importDefault(require("./ContaBancaria"));
-class ContaCorrente extends ContaBancaria_1.default {
+import ContaBancaria from "./ContaBancaria.js";
+class ContaCorrente extends ContaBancaria {
     _limite;
     constructor(numeroConta, saldo, limite) {
         super(numeroConta, saldo);
@@ -19,7 +14,7 @@ class ContaCorrente extends ContaBancaria_1.default {
         const diferenca = this.saldo - valor;
         if (diferenca < 0) {
             if ((diferenca * -1) > this._limite) {
-                console.log(`Impossível sacar mais que seu limite.`);
+                console.log(`\nImpossível sacar mais que seu limite.\n`);
             }
             else {
                 return this.setSaldo = this.saldo - valor;
@@ -34,7 +29,10 @@ class ContaCorrente extends ContaBancaria_1.default {
         return this.setSaldo = this.saldo + valor;
     }
     transferir(valor, conta) {
+        if (valor > this.saldo) {
+            console.log("\nO valor informado é maior do que o saldo existente. Por favor, tente novamente.\n");
+        }
         return conta.depositar(this.sacar(valor));
     }
 }
-exports.default = ContaCorrente;
+export default ContaCorrente;

@@ -1,18 +1,13 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const Banco_1 = __importDefault(require("./Banco"));
-const ContaCorrente_1 = __importDefault(require("./ContaCorrente"));
-const ContaPoupanca_1 = __importDefault(require("./ContaPoupanca"));
-const Relatorio_1 = __importDefault(require("./Relatorio"));
-const contaPoupanca1 = new ContaPoupanca_1.default(2345, 0, 6.75);
-const contaPoupanca2 = new ContaPoupanca_1.default(4657663645, 0, 5.5);
-const contaCorrente1 = new ContaCorrente_1.default(63454, 0, 100);
-const contaCorrente2 = new ContaCorrente_1.default(456723, 0, 200);
-const relatorioGeral = new Relatorio_1.default();
-const banco = new Banco_1.default();
+import Banco from "./Banco.js";
+import ContaCorrente from "./ContaCorrente.js";
+import ContaPoupanca from "./ContaPoupanca.js";
+import Relatorio from "./Relatorio.js";
+const contaPoupanca1 = new ContaPoupanca(2345, 0, 6.75);
+const contaPoupanca2 = new ContaPoupanca(4657663645, 0, 5.5);
+const contaCorrente1 = new ContaCorrente(63454, 0, 100);
+const contaCorrente2 = new ContaCorrente(456723, 0, 200);
+const relatorioGeral = new Relatorio();
+const banco = new Banco();
 // console.log(contaPoupanca1.mostrarDados());
 // console.log(contaCorrente1.mostrarDados());
 // contaPoupanca1.depositar(500);

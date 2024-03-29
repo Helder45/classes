@@ -1,10 +1,5 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const ContaBancaria_1 = __importDefault(require("./ContaBancaria"));
-class ContaPoupanca extends ContaBancaria_1.default {
+import ContaBancaria from "./ContaBancaria.js";
+class ContaPoupanca extends ContaBancaria {
     taxaDeOperacao;
     constructor(numeroConta, saldo, taxaDeOperacao) {
         super(numeroConta, saldo);
@@ -20,7 +15,7 @@ class ContaPoupanca extends ContaBancaria_1.default {
             return this.setSaldo = this.saldo - valor - this.taxaDeOperacao;
         }
         else {
-            console.log("Não foi possível realizar o saque. Saldo inalterado.");
+            console.log("\nNão foi possível realizar o saque. Saldo inalterado.\n");
         }
         return 0;
     }
@@ -28,7 +23,10 @@ class ContaPoupanca extends ContaBancaria_1.default {
         return this.setSaldo = this.saldo + valor - this.taxaDeOperacao;
     }
     transferir(valor, conta) {
+        if (valor > this.saldo) {
+            console.log("\nO valor informado é maior do que o saldo existente. Por favor, tente novamente.\n");
+        }
         return conta.depositar(this.sacar(valor));
     }
 }
-exports.default = ContaPoupanca;
+export default ContaPoupanca;

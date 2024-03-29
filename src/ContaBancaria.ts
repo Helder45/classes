@@ -1,4 +1,4 @@
-abstract class ContaBancaria {
+abstract class ContaBancaria{
     private _numeroConta: number;
     private _saldo: number;
     constructor(numeroConta: number, saldo: number) {

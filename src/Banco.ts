@@ -1,5 +1,5 @@
-import ContaBancaria from "./ContaBancaria";
-import Imprimivel from "./Imprimivel";
+import ContaBancaria from "./ContaBancaria.js";
+import Imprimivel from "./Imprimivel.js";
 
 class Banco implements Imprimivel {
   private _listaContas: ContaBancaria[] = [];
@@ -9,8 +9,6 @@ class Banco implements Imprimivel {
   }
 
   public remover(conta: ContaBancaria): void {
-    // console.log("Antes de remover");
-    // console.log(this._listaContas);
     if (this._listaContas.length != 0) {
       this._listaContas.forEach((itemConta, indexConta, arr) => {
         if (itemConta === conta) {
@@ -18,8 +16,6 @@ class Banco implements Imprimivel {
         }
       });
     }
-    // console.log("Depois de remover");
-    // console.log(this._listaContas);
   }
 
   public procurarConta(numero: number): ContaBancaria | null {

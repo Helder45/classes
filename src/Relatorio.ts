@@ -1,4 +1,4 @@
-import Imprimivel from "./Imprimivel";
+import Imprimivel from "./Imprimivel.js";
 
 class Relatorio{
     gerarRelatorio(imprimivel: Imprimivel): void {
