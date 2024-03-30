@@ -8,7 +8,7 @@ class Banco implements Imprimivel {
     this._listaContas.push(conta);
   }
 
-  public remover(conta: ContaBancaria): void {
+  public remover(conta: ContaBancaria | null): void {
     if (this._listaContas.length != 0) {
       this._listaContas.forEach((itemConta, indexConta, arr) => {
         if (itemConta === conta) {
